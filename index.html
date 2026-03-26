@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- HOME SCREEN -->
+  <div id="home">
+    <h1>📚 Question Bank</h1>
+    <div id="chapters"></div>
+    <button class="random-btn" onclick="startQuiz('random')">🎲 Random Test</button>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="quiz" style="display: none;">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="left">
+        <button id="backBtn" onclick="goBack()">←</button>
+        <span id="chapterName"></span>
+      </div>
+      <div id="timer">00:00</div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- SCORE -->
+    <div id="scoreBox">
+      Score: <span id="score">0</span> / <span id="attempted">0</span>
+    </div>
+
+    <!-- QUESTION -->
+    <div id="questionBox"></div>
+    <div id="options"></div>
+
+    <button id="nextBtn" onclick="nextQuestion()">Next ➜</button>
+
+    <div id="qno"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
